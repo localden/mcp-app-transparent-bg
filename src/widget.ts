@@ -41,9 +41,9 @@ function applyHostContext(ctx: Partial<McpUiHostContext>): void {
 
 const app = new App({ name: "transparent-widget-sample", version: "1.0.0" });
 
-// Register the change handler *before* connect() so no updates are missed.
+// Register the change listener *before* connect() so no updates are missed.
 // The host sends only the fields that changed; getHostContext() stays merged.
-app.onhostcontextchanged = (changed) => applyHostContext(changed);
+app.addEventListener("hostcontextchanged", (changed) => applyHostContext(changed));
 
 await app.connect();
 
