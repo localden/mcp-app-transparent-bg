@@ -39,7 +39,7 @@ Config**), adjusting the path, then restart the app:
   "mcpServers": {
     "transparent-widget-sample": {
       "command": "npm",
-      "args": ["start", "--prefix", "/absolute/path/to/mcp-transparent-widget-sample", "--", "--stdio"]
+      "args": ["start", "--prefix", "/absolute/path/to/mcp-app-transparent-bg", "--", "--stdio"]
     }
   }
 }
