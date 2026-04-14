@@ -47,9 +47,9 @@ Config**), adjusting the path, then restart the app:
 
 ## How the transparency works
 
-Claude renders MCP App widgets inside a sandboxed iframe chain where every
-layer is already `background: transparent`. Three things on the **widget
-side** keep that transparency intact:
+Claude renders MCP App widgets inside a sandboxed iframe, and every frame
+between your widget and the chat surface already has a transparent background.
+Three things on the **widget side** keep that transparency intact:
 
 1. **Don't paint a body background.** `src/server.ts` → `buildWidgetHtml()`
    sets `html, body { background: transparent }`. Anything opaque here hides

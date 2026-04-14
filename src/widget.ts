@@ -3,7 +3,8 @@
  *
  * Demonstrates how to:
  *   1. Leave the widget background transparent so Claude's chat surface shows
- *      through (the host iframe chain is already `background: transparent`).
+ *      through (every frame between your widget and the chat surface already
+ *      has a transparent background).
  *   2. Read `hostContext` from the host (theme + style tokens) and re-apply it
  *      when the user switches light/dark mode.
  *   3. Style elements with the host's CSS custom properties
